@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>????? ????? ?????</h1>
+<h1>רשימת רמזים לתשחץ</h1>
 
 <ul>
   {% for word in site.data.words %}
@@ -10,28 +10,11 @@ layout: default
   {% endfor %}
 </ul>
 
-<h2>??? ??? ???</h2>
+<h2>שלח רמז חדש</h2>
 <form action="https://formspree.io/YOUR-EMAIL" method="POST">
-  <label for="clue">??? ???:</label>
+  <label for="clue">רמז חדש:</label>
   <input type="text" name="clue" required>
-  <label for="word">????:</label>
+  <label for="word">מילה:</label>
   <input type="text" name="word" required>
-  <button type="submit">??? ???</button>
+  <button type="submit">שלח רמז</button>
 </form>
-
-<h2>??????</h2>
-<div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-    this.page.url = '{{ page.url }}';
-    this.page.identifier = '{{ page.id }}';
-};
-(function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://YOUR-DISQUS-SHORTNAME.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>?? ?????? ?'???? ?????? ??? ????? ???????.</noscript>
-
