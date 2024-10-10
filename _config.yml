@@ -4,9 +4,9 @@ baseurl: ""
 url: "https://YOUR-GITHUB-USERNAME.github.io"
 
 # Include necessary plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+
+
+
 
 # Disqus configuration
 disqus:

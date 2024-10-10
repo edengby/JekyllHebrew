@@ -3,17 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title | default: site.title }}</title>
+  <title>Crossword Clues</title>
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+  <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body>
   <header>
-    <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+    <h1><a href="">Crossword Clues</a></h1>
   </header>
 
   <main>
-    {{ content }}
+    <style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+
   </main>
 
   <footer>
@@ -23,8 +43,8 @@
   <div id="disqus_thread"></div>
   <script>
   var disqus_config = function () {
-      this.page.url = '{{ page.url }}';
-      this.page.identifier = '{{ page.id }}';
+      this.page.url = '/404.html';
+      this.page.identifier = '';
   };
   (function() {
       var d = document, s = d.createElement('script');
