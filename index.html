@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<h1>????? ????? ?????</h1>
+
+<ul>
+  {% for word in site.data.words %}
+    <li>{{ word.name }} - {{ word.word }}</li>
+  {% endfor %}
+</ul>
+
+<h2>??? ??? ???</h2>
+<form action="https://formspree.io/YOUR-EMAIL" method="POST">
+  <label for="clue">??? ???:</label>
+  <input type="text" name="clue" required>
+  <label for="word">????:</label>
+  <input type="text" name="word" required>
+  <button type="submit">??? ???</button>
+</form>
+
+<h2>??????</h2>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = '{{ page.url }}';
+    this.page.identifier = '{{ page.id }}';
+};
+(function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://YOUR-DISQUS-SHORTNAME.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>?? ?????? ?'???? ?????? ??? ????? ???????.</noscript>
+
