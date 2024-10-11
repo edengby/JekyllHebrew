@@ -1,0 +1,7 @@
+@import "bootstrap";
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Alef', sans-serif; /* Optional: Use a Hebrew-friendly font */
+}

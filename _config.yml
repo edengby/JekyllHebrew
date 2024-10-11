@@ -1,13 +1,7 @@
-title: "Crossword Clues"
-description: "רשימת רמזים לתשחץ בעברית"
-baseurl: ""
-url: "https://YOUR-GITHUB-USERNAME.github.io"
-
-# Include necessary plugins
-
-
-
-
-# Disqus configuration
-disqus:
-  shortname: YOUR-DISQUS-SHORTNAME
+title: "תשבצים בעברית"
+language: "he"
+direction: "rtl"
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+url: "https://yourusername.github.io/my-crossword-site" # Update with your site URL

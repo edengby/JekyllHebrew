@@ -1,0 +1,30 @@
+---
+layout: default
+title: "רמזי תשבץ"
+---
+
+<div class="container">
+  <h1 class="mt-5 mb-4">{{ page.title }}</h1>
+  <ul class="list-group">
+    {% for item in site.data.crosswords %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span><strong>{{ item.name }}</strong></span>
+      <span class="badge badge-primary badge-pill">{{ item.word }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- User Submission Form -->
+  <h2 class="mt-5 mb-3">הוסף רמז חדש</h2>
+  <form action="https://formspree.io/f/your_form_id" method="POST">
+    <div class="form-group">
+      <label for="name">רמז:</label>
+      <input type="text" name="name" id="name" required class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="word">מילה:</label>
+      <input type="text" name="word" id="word" required class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">שלח</button>
+  </form>
+</div>
