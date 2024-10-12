@@ -2,7 +2,7 @@ title: "תשבצים בעברית"
 description: "רשימת רמזי תשבץ בעברית"
 language: he
 direction: rtl
-url: "https://edengby.github.io/my-crossword-site" # Update with your site URL
+url: "https://yourusername.github.io/my-crossword-site" # Update with your site URL
 
 plugins:
   - jekyll-datapage_gen
@@ -12,6 +12,11 @@ plugins:
 datapage_gen:
   datafiles:
     - crosswords
-  template: 'crossword_template.html'
-  name: 'name'
+  template: 'crossword_template'
+  name: 'word'       # The field in your data to use as the page name
   dir: 'crosswords'
+  extension: 'html'
+  # Additional configuration to pass all fields
+  vars:
+    - name
+    - word
