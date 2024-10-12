@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h1>{{ page.name }}</h1>
+<p><strong>מילה:</strong> {{ page.word }}</p>
+
+<!-- Comment Section -->
+<div id="comments">
+  {% if site.disqus.shortname %}
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.language = "he";
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+  {% endif %}
+</div>
