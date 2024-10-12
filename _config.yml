@@ -4,4 +4,5 @@ direction: "rtl"
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-datapage-generator
 url: "https://yourusername.github.io/my-crossword-site" # Update with your site URL
