@@ -1,7 +1,58 @@
-@import "bootstrap";
-
 body {
+  font-family: Arial, sans-serif;
   direction: rtl;
   text-align: right;
-  font-family: 'Alef', sans-serif; /* Optional: Use a Hebrew-friendly font */
+  background-color: #f9f9f9;
+}
+
+header, footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #343a40;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 8px;
+}
+
+form button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
 }
