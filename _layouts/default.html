@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="רשימת רמזי תשבץ בעברית" />
+  <meta name="description" content="{{ site.description }}" />
   <meta name="keywords" content="תשבצים, רמזים, עברית, מילים" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  <!-- Bootstrap RTL CSS -->
   <link
     rel="stylesheet"
     href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
   />
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
-  {% seo %}
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <!-- Add navigation items if needed -->
-  </nav>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">דף הבית</a></li>
+        <li><a href="{{ '/crosswords/' | relative_url }}">רשימת רמזים</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  {{ content }}
+  <main>
+    {{ content }}
+  </main>
 
-  <footer class="mt-5">
-    <div class="container text-center">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
-    </div>
+  <footer>
+    <p>&copy; {{ site.title }} {{ site.time | date: "%Y" }}</p>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Disqus Integration -->
+  {% if site.disqus.shortname %}
+    <script id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async></script>
+  {% endif %}
 </body>
 </html>
